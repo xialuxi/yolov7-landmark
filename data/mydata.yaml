@@ -1,0 +1,13 @@
+train:
+  - /home/xialuxi/work/dukto/data/boxface/yolo_data/1854/images
+val:
+  - /home/xialuxi/work/dukto/data/boxface/yolo_data/1854/images
+
+# number of classes
+nc: 3
+nkpt: 2
+step: 3
+# for left-right keypoint flipping
+kp_flip: [0, 1]
+# class names
+names: [ 'hoi', 'person', 'box']
