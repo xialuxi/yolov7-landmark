@@ -667,8 +667,8 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
 
         #only for hoi
         # hoi rect w h *= 0.5
-        labels[:, 3] = np.where(labels[:, 0] == 0, labels[:, 3] * 0.5, labels[:, 3])
-        labels[:, 4] = np.where(labels[:, 0] == 0, labels[:, 4] * 0.5, labels[:, 4])
+        #labels[:, 3] = np.where(labels[:, 0] == 0, labels[:, 3] * 0.5, labels[:, 3])
+        #labels[:, 4] = np.where(labels[:, 0] == 0, labels[:, 4] * 0.5, labels[:, 4])
 
         #labels_out = torch.zeros((nL, 6))
         labels_out = torch.zeros((nL, 6 + 3 * self.num_kpts)) if self.kpt_label else torch.zeros((nL, 6))
