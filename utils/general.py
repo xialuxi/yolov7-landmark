@@ -359,8 +359,8 @@ def clip_coords(boxes, img_shape, kpt_label=False, step=3):
     boxes[:, 2].clamp_(0, img_shape[1])  # x2
     boxes[:, 3].clamp_(0, img_shape[0])  # y2
     if kpt_label:
-        boxes[:, 4::step].clamp_(0, img_shape[1])  # x1
-        boxes[:, 5::step].clamp_(0, img_shape[0])  # y1
+        boxes[:, 0::step].clamp_(0, img_shape[1])  # x1
+        boxes[:, 1::step].clamp_(0, img_shape[0])  # y1
 
 
 def bbox_iou(box1, box2, x1y1x2y2=True, GIoU=False, DIoU=False, CIoU=False, eps=1e-7):
